@@ -5,10 +5,10 @@ This repository has an example of a postfix relay running in Kubernetes using a 
 You can build the Docker image locally
 ```bash
 # For local build
-docker build -t eldada.jfrog.io/docker/postfix-relay:0.9 Docker/
+docker build -t anantharc/postfix:3.0.2 Docker/
 
 # Multi arch build and push
-docker buildx build --platform linux/amd64,linux/arm64 -t eldada.jfrog.io/docker/postfix-relay:0.9 Docker/p --push
+docker buildx build --platform linux/amd64,linux/arm64 -t anantharc/postfix:3.0.2 Docker/ --push
 ```
 
 ## Run locally with Docker
