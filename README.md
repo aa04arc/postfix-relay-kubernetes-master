@@ -94,8 +94,6 @@ Deploy postfix
 helm upgrade --install postfix-relay helm/postfix -f custom-values.yaml
 ```
 
-### Postfix Metrics exporter
-An optional postfix-exporter sidecar can be deployed for exposing postfix metrics. This is using the work from https://github.com/kumina/postfix_exporter.
 
 To enable the exporter sidecar, update your `custom-values.yaml` file and **add**
 ```yaml
@@ -112,9 +110,3 @@ Deploy postfix
 ```bash
 helm upgrade --install postfix-relay helm/postfix -f custom-values.yaml
 ```
-
-## Thanks
-The work in this repository is based on
-- https://github.com/applariat/kubernetes-postfix-relay-host
-- https://github.com/kumina/postfix_exporter
-- My pains
