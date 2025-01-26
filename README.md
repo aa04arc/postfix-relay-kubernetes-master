@@ -1,5 +1,7 @@
 # Postfix relay running in Kubernetes
-This repository has an example of a postfix relay running in Kubernetes using a helm chart.
+# Fork of https://github.com/eldada/postfix-relay-kubernetes 
+
+This repository has an example of a postfix relay running in Kubernetes using a helm chart via argocd. 
 
 ## Build Docker image
 You can build the Docker image locally
@@ -110,3 +112,9 @@ Deploy postfix
 ```bash
 helm upgrade --install postfix-relay helm/postfix -f custom-values.yaml
 ```
+
+
+ArgoCD: 
+deploying new application
+
+```app create postfix --repo https://github.com/aa04arc/postfix-relay-kubernetes-master.git --path helm/postfix --dest-server https://kubernetes.default.svc --dest-namespace default```
