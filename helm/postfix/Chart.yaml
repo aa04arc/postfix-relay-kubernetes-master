@@ -6,7 +6,7 @@ name: postfix
 keywords:
 - postfix
 sources:
-- https://github.com/aa04arc/postfix-relay-kubernetes
+- https://github.com/aa04arc/postfix-relay-kubernetes-master
 maintainers:
 - name: aa04arc
   email: aa04arc@aa04arc.com

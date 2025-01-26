@@ -37,6 +37,22 @@ image:
   tag: 3.0.2
   pullPolicy: IfNotPresent
 
+# Exporter Docker image
+# https://github.com/kumina/postfix_exporter
+exporter:
+  enabled: false
+  image:
+    repository: anantharc/postfix-exporter
+    tag: 3.0.2
+    pullPolicy: IfNotPresent
+  # Resources needed for the postfix-exporter container
+  resources:
+    requests:
+      cpu: 10m
+      memory: 40Mi
+    limits:
+      cpu: 100m
+      memory: 100Mi
 
 # Add a ServiceMonitor object for scraping metrics by Prometheus
 # Must have exporter.enabled=true
